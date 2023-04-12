@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<!-- this 'link' tag tells the browser to import external file 'style.css' as a design of this webpage -->
+<link rel="stylesheet" href="style.css">
+
+<!--
+    This 'meta' tag is used to tell the browser 
+    how to adjust the dimensions and scaling of the webpage to fit the width of the device being used to view it.
+-->
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
+
+<!-- this 'script' tag will tell the browser to use JavaScript code from external file as a main source. -->
+<script src="index.mjs" type="module"></script>
+
+<!-- Webpage title -->
+<title>Karātavas spēle</title>
+
+<!-- In this 'main' tag, the whole game process will take place here-->
+<main>
+    <!-- We identify the header to show what game the user is playing -->
+    <div id="header">KARATAVAS</div>
+    
+    <!-- canvas will be drawn here to represent gallows and stickman -->
+    <canvas width="300" height="200"></canvas>
+    
+    <!-- This section is the box that you see on the right side, the user's input area-->
+    <section id="game">
+        <p id="scoreCount">*testēšana*</p>
+        <p id="warningMsg"></p>
+
+        <p id="category">*testēšana*</p>
+        <p id="yourword">Jūsu vārds:</p>
+        <p id="hiddenWord"></p>
+        
+        <!-- this div is a small box which will display a letter that was used to guess -->
+        <div class="inputTypes"> Jūsu vēstule: 
+            <input type="text" disabled="true" id="inputBox" placeholder="..." maxlength="1">
+        </div>
+        <p id="usedLetters">Izmantotie burti: </p>
+        <p id="guessCount">Atlikušie uzminējumi: </p>
+        <p id="errorMsg"></p>
+    
+        <!-- 
+            This is a div with keyboard id in it, to realistically represent buttons as keyboard.
+            That's why we split them into 3 rows. 
+        -->
+        <div id="keyboard">
+            <div id="letters_row1">
+                <button class="key" id="Ū">Ū</button>
+                <button class="key" id="G">G</button>
+                <button class="key" id="J">J</button>
+                <button class="key" id="R">R</button>
+                <button class="key" id="M">M</button>
+                <button class="key" id="V">V</button>
+                <button class="key" id="N">N</button>
+                <button class="key" id="Z">Z</button>
+                <button class="key" id="Ē">Ē</button>
+                <button class="key" id="Č">Č</button>
+                <button class="key" id="Ž">Ž</button>
+                <button class="key" id="H">H</button>
+                <button class="key" id="Ķ">Ķ</button>
+            </div>
+            <div id="letters_row2">
+                <button class="key" id="Š">Š</button>
+                <button class="key" id="U">U</button>
+                <button class="key" id="S">S</button>
+                <button class="key" id="I">I</button>
+                <button class="key" id="L">L</button>
+                <button class="key" id="D">D</button>
+                <button class="key" id="A">A</button>
+                <button class="key" id="T">T</button>
+                <button class="key" id="E">E</button>
+                <button class="key" id="C">C</button>
+            </div>
+            <div id="letters_row3">
+                <button class="key" id="Ņ">Ņ</button>
+                <button class="key" id="B">B</button>
+                <button class="key" id="Ī">Ī</button>
+                <button class="key" id="K">K</button>
+                <button class="key" id="P">P</button>
+                <button class="key" id="O">O</button>
+                <button class="key" id="Ā">Ā</button>
+                <button class="key" id="Ļ">Ļ</button>
+            </div>
+        </div>
+    </section>
+</main>
